@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7B04DEA2B325E340003A60C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04DE92B325E340003A60C /* AppDelegate.swift */; };
+		C7B04DEC2B325E340003A60C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04DEB2B325E340003A60C /* SceneDelegate.swift */; };
+		C7B04DEE2B325E340003A60C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04DED2B325E340003A60C /* ViewController.swift */; };
+		C7B04DF12B325E340003A60C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B04DEF2B325E340003A60C /* Main.storyboard */; };
+		C7B04DF32B325E350003A60C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B04DF22B325E350003A60C /* Assets.xcassets */; };
+		C7B04DF62B325E350003A60C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B04DF42B325E350003A60C /* LaunchScreen.storyboard */; };
+		C7B04DFF2B325ECD0003A60C /* BLE_Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04DFE2B325ECD0003A60C /* BLE_Peripheral.swift */; };
+		C7B04E012B325EDE0003A60C /* CBUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04E002B325EDE0003A60C /* CBUUIDs.swift */; };
+		C7B04E042B325F180003A60C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04E032B325F180003A60C /* TableViewCell.swift */; };
+		C7B04E072B325FC00003A60C /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04E062B325FC00003A60C /* ConsoleViewController.swift */; };
+		C7B04E092B325FE20003A60C /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B04E082B325FE20003A60C /* GraphViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C7B04DE62B325E340003A60C /* Glaucoma_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glaucoma_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7B04DE92B325E340003A60C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7B04DEB2B325E340003A60C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C7B04DED2B325E340003A60C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7B04DF02B325E340003A60C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7B04DF22B325E350003A60C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7B04DF52B325E350003A60C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7B04DF72B325E350003A60C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7B04DFE2B325ECD0003A60C /* BLE_Peripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE_Peripheral.swift; sourceTree = "<group>"; };
+		C7B04E002B325EDE0003A60C /* CBUUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUUIDs.swift; sourceTree = "<group>"; };
+		C7B04E032B325F180003A60C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C7B04E062B325FC00003A60C /* ConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
+		C7B04E082B325FE20003A60C /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7B04DE32B325E340003A60C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7B04DDD2B325E340003A60C = {
+			isa = PBXGroup;
+			children = (
+				C7B04DE82B325E340003A60C /* Glaucoma_App */,
+				C7B04DE72B325E340003A60C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7B04DE72B325E340003A60C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7B04DE62B325E340003A60C /* Glaucoma_App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7B04DE82B325E340003A60C /* Glaucoma_App */ = {
+			isa = PBXGroup;
+			children = (
+				C7B04DE92B325E340003A60C /* AppDelegate.swift */,
+				C7B04DEB2B325E340003A60C /* SceneDelegate.swift */,
+				C7B04DFD2B325EB00003A60C /* Model */,
+				C7B04E022B325EE70003A60C /* View */,
+				C7B04E052B325F6E0003A60C /* Controllers */,
+				C7B04DEF2B325E340003A60C /* Main.storyboard */,
+				C7B04DF22B325E350003A60C /* Assets.xcassets */,
+				C7B04DF42B325E350003A60C /* LaunchScreen.storyboard */,
+				C7B04DF72B325E350003A60C /* Info.plist */,
+			);
+			path = Glaucoma_App;
+			sourceTree = "<group>";
+		};
+		C7B04DFD2B325EB00003A60C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7B04DFE2B325ECD0003A60C /* BLE_Peripheral.swift */,
+				C7B04E002B325EDE0003A60C /* CBUUIDs.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7B04E022B325EE70003A60C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7B04E032B325F180003A60C /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7B04E052B325F6E0003A60C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7B04DED2B325E340003A60C /* ViewController.swift */,
+				C7B04E062B325FC00003A60C /* ConsoleViewController.swift */,
+				C7B04E082B325FE20003A60C /* GraphViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7B04DE52B325E340003A60C /* Glaucoma_App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7B04DFA2B325E350003A60C /* Build configuration list for PBXNativeTarget "Glaucoma_App" */;
+			buildPhases = (
+				C7B04DE22B325E340003A60C /* Sources */,
+				C7B04DE32B325E340003A60C /* Frameworks */,
+				C7B04DE42B325E340003A60C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Glaucoma_App;
+			productName = Glaucoma_App;
+			productReference = C7B04DE62B325E340003A60C /* Glaucoma_App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7B04DDE2B325E340003A60C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					C7B04DE52B325E340003A60C = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = C7B04DE12B325E340003A60C /* Build configuration list for PBXProject "Glaucoma_App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7B04DDD2B325E340003A60C;
+			productRefGroup = C7B04DE72B325E340003A60C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7B04DE52B325E340003A60C /* Glaucoma_App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7B04DE42B325E340003A60C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7B04DF62B325E350003A60C /* LaunchScreen.storyboard in Resources */,
+				C7B04DF32B325E350003A60C /* Assets.xcassets in Resources */,
+				C7B04DF12B325E340003A60C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7B04DE22B325E340003A60C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7B04DEE2B325E340003A60C /* ViewController.swift in Sources */,
+				C7B04DFF2B325ECD0003A60C /* BLE_Peripheral.swift in Sources */,
+				C7B04E012B325EDE0003A60C /* CBUUIDs.swift in Sources */,
+				C7B04E042B325F180003A60C /* TableViewCell.swift in Sources */,
+				C7B04E072B325FC00003A60C /* ConsoleViewController.swift in Sources */,
+				C7B04E092B325FE20003A60C /* GraphViewController.swift in Sources */,
+				C7B04DEA2B325E340003A60C /* AppDelegate.swift in Sources */,
+				C7B04DEC2B325E340003A60C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C7B04DEF2B325E340003A60C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7B04DF02B325E340003A60C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7B04DF42B325E350003A60C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7B04DF52B325E350003A60C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7B04DF82B325E350003A60C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7B04DF92B325E350003A60C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7B04DFB2B325E350003A60C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P9579UU767;
+				INFOPLIST_FILE = Glaucoma_App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mhegde.Glaucoma-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7B04DFC2B325E350003A60C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P9579UU767;
+				INFOPLIST_FILE = Glaucoma_App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mhegde.Glaucoma-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7B04DE12B325E340003A60C /* Build configuration list for PBXProject "Glaucoma_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7B04DF82B325E350003A60C /* Debug */,
+				C7B04DF92B325E350003A60C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7B04DFA2B325E350003A60C /* Build configuration list for PBXNativeTarget "Glaucoma_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7B04DFB2B325E350003A60C /* Debug */,
+				C7B04DFC2B325E350003A60C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7B04DDE2B325E340003A60C /* Project object */;
+}
