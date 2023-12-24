@@ -53,7 +53,7 @@
 /* Begin PBXFileReference section */
 		186A406411575715308E96F5 /* Pods-Glaucoma_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glaucoma_App.release.xcconfig"; path = "Target Support Files/Pods-Glaucoma_App/Pods-Glaucoma_App.release.xcconfig"; sourceTree = "<group>"; };
 		5366BBD07457CA0CDACDED5E /* Pods_Glaucoma_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glaucoma_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7B04DE62B325E340003A60C /* Glaucoma_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glaucoma_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7B04DE62B325E340003A60C /* Glauc-At-Home-A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Glauc-At-Home-A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B04DE92B325E340003A60C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7B04DEB2B325E340003A60C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C7B04DED2B325E340003A60C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		C7B04DE72B325E340003A60C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C7B04DE62B325E340003A60C /* Glaucoma_App.app */,
+				C7B04DE62B325E340003A60C /* Glauc-At-Home-A.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,9 +194,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C7B04DE52B325E340003A60C /* Glaucoma_App */ = {
+		C7B04DE52B325E340003A60C /* Glauc-At-Home-A */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C7B04DFA2B325E350003A60C /* Build configuration list for PBXNativeTarget "Glaucoma_App" */;
+			buildConfigurationList = C7B04DFA2B325E350003A60C /* Build configuration list for PBXNativeTarget "Glauc-At-Home-A" */;
 			buildPhases = (
 				AC8A58EDF745C5CAFBBFF32B /* [CP] Check Pods Manifest.lock */,
 				C7B04DE22B325E340003A60C /* Sources */,
@@ -208,7 +208,7 @@
 			);
 			dependencies = (
 			);
-			name = Glaucoma_App;
+			name = "Glauc-At-Home-A";
 			packageProductDependencies = (
 				CD654A992B33E62400659FE8 /* FirebaseAnalytics */,
 				CD654A9B2B33E62400659FE8 /* FirebaseAnalyticsOnDeviceConversion */,
@@ -239,7 +239,7 @@
 				CD654ACD2B33E62400659FE8 /* FirebaseStorageCombine-Community */,
 			);
 			productName = Glaucoma_App;
-			productReference = C7B04DE62B325E340003A60C /* Glaucoma_App.app */;
+			productReference = C7B04DE62B325E340003A60C /* Glauc-At-Home-A.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +273,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C7B04DE52B325E340003A60C /* Glaucoma_App */,
+				C7B04DE52B325E340003A60C /* Glauc-At-Home-A */,
 			);
 		};
 /* End PBXProject section */
@@ -498,9 +498,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9579UU767;
 				INFOPLIST_FILE = Glaucoma_App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Glauc-At-Home-A";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,9 +520,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9579UU767;
 				INFOPLIST_FILE = Glaucoma_App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Glauc-At-Home-A";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -544,7 +548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C7B04DFA2B325E350003A60C /* Build configuration list for PBXNativeTarget "Glaucoma_App" */ = {
+		C7B04DFA2B325E350003A60C /* Build configuration list for PBXNativeTarget "Glauc-At-Home-A" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C7B04DFB2B325E350003A60C /* Debug */,
