@@ -32,6 +32,7 @@ class ConsoleViewController: UIViewController {
     getData();
   }
   var db: Firestore!
+  var prev = 0
 
 
   override func viewDidLoad() {
@@ -62,9 +63,10 @@ class ConsoleViewController: UIViewController {
   }
 
   @objc func appendRxDataToTextView(notification: Notification) -> Void{
-    if ((notification.object! as! NSString).integerValue > 20000) {
-        consoleTextView.text.append("\n[Recv]: \(notification.object!) \n")
+    if (abs((notification.object! as! NSString).integerValue - prev) < 5) {
+        consoleTextView.text.append("\n[Recv]: \((notification.object! as! NSString).integerValue) \n")
         data.append((notification.object! as! NSString).integerValue)
+        prev = (notification.object! as! NSString).integerValue
         var ref: DocumentReference? = nil
         ref = db.collection("readings").addDocument(data: [
             "user" : "User1",

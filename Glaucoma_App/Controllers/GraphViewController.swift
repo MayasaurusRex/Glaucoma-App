@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import SwiftUI
 import Charts
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseStorage
 
 
 class GraphViewController: UIViewController, ChartViewDelegate {
@@ -59,26 +61,26 @@ class GraphViewController: UIViewController, ChartViewDelegate {
         view.addSubview(linechart)
         
         var entries = [ChartDataEntry]()
-//        db.collection("readings").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                var x = 1
-//                for document in querySnapshot!.documents {
-////                    print("\(document.documentID) => \(document.data())")
-////                    let d = document.get("value") as! Double
-////                    print(x)
-////                    entries.append(ChartDataEntry(x: Double(x),
-////                                                  y: Double(d)))
-//                    x = x+1
-//                }
-//            }
-//        }
+        db.collection("readings").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                var x = 1
+                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+//                    let d = document.get("value") as! Double
+//                    print(x)
+//                    entries.append(ChartDataEntry(x: Double(x),
+//                                                  y: Double(d)))
+                    x = x+1
+                }
+            }
+        }
         print(data.count)
         for x in 0..<data.count {
             let val = Double(data[x] as! Int)
             entries.append(ChartDataEntry(x: Double(x),
-                                          y: Double(val)))
+                                          y: val))
         }
         
         let set = LineChartDataSet(entries: entries)
