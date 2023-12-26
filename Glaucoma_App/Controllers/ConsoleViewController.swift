@@ -10,6 +10,7 @@ import CoreBluetooth
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import Foundation
 
 
 class ConsoleViewController: UIViewController {
@@ -32,6 +33,7 @@ class ConsoleViewController: UIViewController {
     getData();
   }
   var db: Firestore!
+  var today = "0000, Jan 01, 1990"
   var prev = 0
 
 
@@ -43,6 +45,11 @@ class ConsoleViewController: UIViewController {
     Firestore.firestore().settings = settings
     // [END setup]
     db = Firestore.firestore()
+      
+    let date = Date()
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "y, MMM d, HH:mm"
+    today = dateFormatter.string(from: date)
 
     keyboardNotifications()
 
@@ -55,7 +62,7 @@ class ConsoleViewController: UIViewController {
     txLabel.text = "TX:\(String(BlePeripheral.connectedTXChar!.uuid.uuidString))"
 //    rxLabel.text = "RX:\(String(BlePeripheral.connectedRXChar!.uuid.uuidString))"
 
-    if let service = BlePeripheral.connectedService {
+      if BlePeripheral.connectedService != nil {
       serviceLabel.text = "Number of Services: \(String((BlePeripheral.connectedPeripheral?.services!.count)!))"
     } else{
       print("Service was not found")
@@ -64,11 +71,12 @@ class ConsoleViewController: UIViewController {
 
   @objc func appendRxDataToTextView(notification: Notification) -> Void{
     if (abs((notification.object! as! NSString).integerValue - prev) < 5) {
+        
         consoleTextView.text.append("\n[Recv]: \((notification.object! as! NSString).integerValue) \n")
         data.append((notification.object! as! NSString).integerValue)
         prev = (notification.object! as! NSString).integerValue
         var ref: DocumentReference? = nil
-        ref = db.collection("readings").addDocument(data: [
+        ref = db.collection(today).addDocument(data: [
             "user" : "User1",
             "value": (notification.object! as! NSString).integerValue
             
