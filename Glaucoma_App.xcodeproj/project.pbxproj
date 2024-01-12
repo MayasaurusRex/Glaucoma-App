@@ -503,6 +503,7 @@
 				DEVELOPMENT_TEAM = P9579UU767;
 				INFOPLIST_FILE = Glaucoma_App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Glauc-At-Home-A";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -525,6 +526,7 @@
 				DEVELOPMENT_TEAM = P9579UU767;
 				INFOPLIST_FILE = Glaucoma_App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Glauc-At-Home-A";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
