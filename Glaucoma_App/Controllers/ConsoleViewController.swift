@@ -72,12 +72,12 @@ class ConsoleViewController: UIViewController {
   @objc func appendRxDataToTextView(notification: Notification) -> Void{
     consoleTextView.text.append("\n[Recv]: \(notification.object! as! NSString) \n")
     if (abs((notification.object! as! NSString).integerValue - prev) < 5) {
-        data.append((notification.object! as! NSString).integerValue)
-        prev = (notification.object! as! NSString).integerValue
+        data.append((notification.object! as! NSString).floatValue)
+      prev = Int((notification.object! as! NSString).floatValue)
         var ref: DocumentReference? = nil
         ref = db.collection(today).addDocument(data: [
             "user" : "User1",
-            "value": (notification.object! as! NSString).integerValue
+            "value": (notification.object! as! NSString).floatValue
             
         ]) { err in
             if let err = err {

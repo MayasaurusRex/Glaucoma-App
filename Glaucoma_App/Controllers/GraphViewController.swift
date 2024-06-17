@@ -78,7 +78,7 @@ class GraphViewController: UIViewController, ChartViewDelegate {
         }
         print(data.count)
         for x in 0..<data.count {
-            let val = Double(data[x] as! Int)
+            let val = Double(data[x] as! Float)
             entries.append(ChartDataEntry(x: Double(x),
                                           y: val))
         }
