@@ -40,12 +40,12 @@ In order to build the application with all of its features an Apple Developer ac
 
 #### Commands to Build
 
-`git clone (insert repo here)`
-`git submodule init`
-`git submodule update`
-`Open Xcode Project`
-`Sign in with developer account in Xcode`
-`Click the build button in Xcode, it looks like a play symbol in the top left of Xcode.`
+`git clone (insert repo here)` \
+`git submodule init` \
+`git submodule update` \
+`Open Xcode Project` \
+`Sign in with developer account in Xcode` \
+`Click the build button in Xcode, it looks like a play symbol in the top left of Xcode.` \
 
 #### Software Desgin Overview
 
