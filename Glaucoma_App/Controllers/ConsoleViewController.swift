@@ -19,33 +19,30 @@ class ConsoleViewController: UIViewController {
   var peripheralManager: CBPeripheralManager?
   var peripheral: CBPeripheral?
   var periperalTXCharacteristic: CBCharacteristic?
-    var data:Array<Any> = []
+  var data:Array<Any> = [] // local data array
+  var db: Firestore!
+  var today = "0000, Jan 01, 1990"
+  var prev = 0
 
+  // UI
   @IBOutlet weak var peripheralLabel: UILabel!
   @IBOutlet weak var serviceLabel: UILabel!
   @IBOutlet weak var consoleTextView: UITextView!
   @IBOutlet weak var consoleTextField: UITextField!
   @IBOutlet weak var txLabel: UILabel!
-//  @IBOutlet weak var rxLabel: UILabel!
   @IBOutlet weak var captureButton: UIButton!
-
   @IBAction func scanningAction(_ sender: Any) {
     getData();
   }
-  var db: Firestore!
-  var today = "0000, Jan 01, 1990"
-  var prev = 0
-
 
   override func viewDidLoad() {
       super.viewDidLoad()
-    // [START setup]
+    // initialize firestore database
     let settings = FirestoreSettings()
-
     Firestore.firestore().settings = settings
-    // [END setup]
     db = Firestore.firestore()
       
+    // create date object to for databse entry
     let date = Date()
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "y, MMM d, HH:mm"
@@ -60,7 +57,6 @@ class ConsoleViewController: UIViewController {
     peripheralLabel.text = BlePeripheral.connectedPeripheral?.name
 
     txLabel.text = "TX:\(String(BlePeripheral.connectedTXChar!.uuid.uuidString))"
-//    rxLabel.text = "RX:\(String(BlePeripheral.connectedRXChar!.uuid.uuidString))"
 
       if BlePeripheral.connectedService != nil {
       serviceLabel.text = "Number of Services: \(String((BlePeripheral.connectedPeripheral?.services!.count)!))"
@@ -69,16 +65,27 @@ class ConsoleViewController: UIViewController {
     }
   }
 
+  // Function that receives  data from the BLE device
   @objc func appendRxDataToTextView(notification: Notification) -> Void{
+    
+    // print data recieved
     consoleTextView.text.append("\n[Recv]: \(notification.object! as! NSString) \n")
+      
+    // create some sort of buffer to ensure that data was not lost in transmission
     if (abs((notification.object! as! NSString).integerValue - prev) < 5) {
+        
+        // append recieved value into local array
         data.append((notification.object! as! NSString).floatValue)
-      prev = Int((notification.object! as! NSString).floatValue)
+        prev = Int((notification.object! as! NSString).floatValue)
+        
+        // add value to current collection in Firebase
         var ref: DocumentReference? = nil
         ref = db.collection(today).addDocument(data: [
+            // can change these to include any parameters associated with the readings
             "user" : "User1",
             "value": (notification.object! as! NSString).floatValue
             
+        // error check document and collection values in the database
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -89,6 +96,7 @@ class ConsoleViewController: UIViewController {
     }
   }
 
+  // function used for sending data via app console
   func appendTxDataToTextView(){
     consoleTextView.text.append("\n[Sent]: \(String(consoleTextField.text!)) \n")
   }

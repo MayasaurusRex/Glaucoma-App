@@ -16,10 +16,13 @@ import FirebaseStorage
 
 class GraphViewController: UIViewController, ChartViewDelegate {
     
+    // Data
     var linechart = LineChartView()
     var db: Firestore!
     let storage = Storage.storage()
     var data:Array<Any> = []
+    
+    // UI
     @IBOutlet weak var saveImageButton: UIButton!
     
     @IBAction func savingAction(_ sender: Any) {
@@ -43,46 +46,44 @@ class GraphViewController: UIViewController, ChartViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         linechart.delegate = self
-        // [START setup]
+        // initialize firestore database
         let settings = FirestoreSettings()
-
         Firestore.firestore().settings = settings
-        // [END setup]
         db = Firestore.firestore()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
+        // create the chart in the window
         linechart.frame = CGRect(x: 0, y: 0,
                                  width: self.view.frame.size.width,
                                  height: self.view.frame.size.width)
         linechart.center = view.center
         view.addSubview(linechart)
         
+        // iterate through all the readings in the Firebase collection
         var entries = [ChartDataEntry]()
         db.collection("readings").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
+                // count the documents
                 var x = 1
                 for document in querySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
-//                    let d = document.get("value") as! Double
-//                    print(x)
-//                    entries.append(ChartDataEntry(x: Double(x),
-//                                                  y: Double(d)))
                     x = x+1
                 }
             }
         }
-        print(data.count)
+        
+        // for each data entry, add to the line chart
         for x in 0..<data.count {
             let val = Double(data[x] as! Float)
             entries.append(ChartDataEntry(x: Double(x),
                                           y: val))
         }
         
+        // show the line chert
         let set = LineChartDataSet(entries: entries)
         set.drawCirclesEnabled = false
         set.colors = ChartColorTemplates.vordiplom()

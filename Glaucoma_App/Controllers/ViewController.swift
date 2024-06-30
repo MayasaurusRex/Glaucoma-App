@@ -20,29 +20,18 @@ class ViewController: UIViewController {
     private var timer = Timer()
 
     // UI
-//      @IBOutlet weak var tableView: UITableView!
-//      @IBOutlet weak var peripheralFoundLabel: UILabel!
-//      @IBOutlet weak var scanningLabel: UILabel!
     @IBOutlet weak var scanningButton: UIButton!
-
     @IBAction func scanningAction(_ sender: Any) {
     startScanning()
   }
 
     override func viewDidLoad() {
       super.viewDidLoad()
-
-//        self.tableView.delegate = self
-//        self.tableView.dataSource = self
-//        self.tableView.reloadData()
-      // Manager
       centralManager = CBCentralManager(delegate: self, queue: nil)
     }
 
     override func viewDidAppear(_ animated: Bool) {
       disconnectFromDevice()
-//        self.tableView.reloadData()
-      //startScanning()
     }
 
     func connectToDevice() -> Void {
@@ -67,7 +56,6 @@ class ViewController: UIViewController {
         rssiArray.removeAll()
         // Start Scanning
         centralManager?.scanForPeripherals(withServices: [CBUUIDs.BLEService_UUID])
-//          scanningLabel.text = "Scanning..."
         scanningButton.isEnabled = false
         Timer.scheduledTimer(withTimeInterval: 15, repeats: false) {_ in
             self.stopScanning()
@@ -80,8 +68,6 @@ class ViewController: UIViewController {
       rssiArray.removeAll()
       // Start Scanning
       centralManager?.scanForPeripherals(withServices: [] , options: [CBCentralManagerScanOptionAllowDuplicatesKey:true])
-//        scanningLabel.text = "Scanning..."
-
       Timer.scheduledTimer(withTimeInterval: 15, repeats: false) {_ in
           self.stopScanning()
       }
@@ -93,7 +79,6 @@ class ViewController: UIViewController {
     }
 
     func stopScanning() -> Void {
-//          scanningLabel.text = ""
         scanningButton.isEnabled = true
         centralManager?.stopScan()
     }
@@ -151,27 +136,6 @@ extension ViewController: CBCentralManagerDelegate {
     }
 
     // MARK: - Discover
-//      func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-//        print("Function: \(#function),Line: \(#line)")
-//
-//        bluefruitPeripheral = peripheral
-//
-//        if peripheralArray.contains(peripheral) {
-//            print("Duplicate Found.")
-//        } else {
-//          peripheralArray.append(peripheral)
-//          rssiArray.append(RSSI)
-//        }
-//        print(RSSI)
-//        peripheralFoundLabel.text = "Peripherals Found: \(peripheralArray.count)"
-//
-//        bluefruitPeripheral.delegate = self
-//
-//        print("Peripheral Discovered: \(peripheral)")
-//
-//        self.tableView.reloadData()
-//      }
-  
      func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral,advertisementData: [String : Any], rssi RSSI: NSNumber) {
 
          bluefruitPeripheral = peripheral
