@@ -47,6 +47,14 @@ class ConsoleViewController: UIViewController {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "y, MMM d, HH:mm"
     today = dateFormatter.string(from: date)
+      
+    // add a new specific document to the database
+    // this code chunk must be implemented before data can be written to the document in Firebase
+    db.collection(today).document("Patient1").setData([
+        "CCT": "0",
+    ])
+    print("Document successfully written!")
+    
 
     keyboardNotifications()
 
@@ -80,11 +88,14 @@ class ConsoleViewController: UIViewController {
         
         // add value to current collection in Firebase
         var ref: DocumentReference? = nil
-        ref = db.collection(today).addDocument(data: [
-            // can change these to include any parameters associated with the readings
-            "user" : "User1",
-            "value": (notification.object! as! NSString).floatValue
-            
+        
+        // find EXISTING document (must be defined first, otherwise values will not save, and no error message is given)
+        ref = db.collection(today).document("Patient1")
+        
+        // add values to the given field
+        ref!.updateData([
+          "readings":FieldValue.arrayUnion([(notification.object! as! NSString).floatValue])
+
         // error check document and collection values in the database
         ]) { err in
             if let err = err {
