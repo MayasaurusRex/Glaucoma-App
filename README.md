@@ -59,4 +59,5 @@ The MVC architecture was central to the software design. MVC is commonly used fo
 
 #### How to Integrate a new Firebase Database
 
-In order to communicate with a new Firebase database, follow the steps outlined here: (IntegrateFirebase.pdf)
+In order to communicate with a new Firebase database, follow the steps outlined here: 
+https://github.com/MayasaurusRex/Glaucoma-App/blob/main/IntegrateFirebase.pdf[/embed]
