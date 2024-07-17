@@ -48,7 +48,7 @@ In order to build the application with all of its features an Apple Developer ac
 `Click the build button in Xcode, it looks like a play symbol in the top left of Xcode.` \
 
 #### Software Desgin Overview
-![software_files]([https://github.com/user-attachments/assets/4962eefa-d03a-4ac3-a1b8-80d5bcae9f17](https://github.com/user-attachments/assets/695fa1cd-43c9-433e-8b99-eceb4c7b9339))
+![software_files](https://github.com/user-attachments/assets/695fa1cd-43c9-433e-8b99-eceb4c7b9339)
 \
 \
 
