@@ -51,7 +51,10 @@ In order to build the application with all of its features an Apple Developer ac
 ![software_files](https://github.com/user-attachments/assets/695fa1cd-43c9-433e-8b99-eceb4c7b9339)
 \
 \
-
+The software files, shown above, provide a little more insight into the actual implementation of the MVC methods for the app. 
+\
+In the Base folder, the Main.storyboard file provides a benchmark for the user interface (UI). This is where future work for new pages in the application should start. Buttons, lists, graphs,etc. can be created here by adding a new view to the storyboard. Future development on application flow (the order in which the views are shown) begins here as well.
+\
 
 ##### MVC Architecture
 ![mvc](https://user-images.githubusercontent.com/67076014/182691878-1b40eb67-800a-4a30-ac28-1b5ce468476c.png)
