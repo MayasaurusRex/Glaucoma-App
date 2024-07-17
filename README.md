@@ -53,8 +53,11 @@ In order to build the application with all of its features an Apple Developer ac
 \
 The software files, shown above, provide a little more insight into the actual implementation of the MVC methods for the app. 
 \
+\
 In the Base folder, the Main.storyboard file provides a benchmark for the user interface (UI). This is where future work for new pages in the application should start. Buttons, lists, graphs,etc. can be created here by adding a new view to the storyboard. Future development on application flow (the order in which the views are shown) begins here as well.
 \
+\
+In the Controllers folder, the files each represent a "view". Each of these views use different libraries to display information on the screen. They each take in user input and handle it, and any relavant data is stored persistently. User inputs, such as navigating to different pages is also handled within each view. ViewController is the initial view where the user can connect to the BLE peripheral. ConsoleViewController is the view in which the data sent and recieved is shown. GraphViewController displays the data recieved during the application's use.
 
 ##### MVC Architecture
 ![mvc](https://user-images.githubusercontent.com/67076014/182691878-1b40eb67-800a-4a30-ac28-1b5ce468476c.png)
