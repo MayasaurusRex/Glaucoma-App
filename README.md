@@ -48,6 +48,10 @@ In order to build the application with all of its features an Apple Developer ac
 `Click the build button in Xcode, it looks like a play symbol in the top left of Xcode.` \
 
 #### Software Desgin Overview
+![software_files]([https://github.com/user-attachments/assets/4962eefa-d03a-4ac3-a1b8-80d5bcae9f17](https://github.com/user-attachments/assets/695fa1cd-43c9-433e-8b99-eceb4c7b9339))
+\
+\
+
 
 ##### MVC Architecture
 ![mvc](https://user-images.githubusercontent.com/67076014/182691878-1b40eb67-800a-4a30-ac28-1b5ce468476c.png)
