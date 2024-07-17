@@ -66,6 +66,12 @@ In the Base folder, the Main.storyboard file provides a benchmark for the user i
 \
 \
 In the Controllers folder, the files each represent a "view". Each of these views use different libraries to display information on the screen. They each take in user input and handle it, and any relavant data is stored persistently. User inputs, such as navigating to different pages is also handled within each view. ViewController is the initial view where the user can connect to the BLE peripheral. ConsoleViewController is the view in which the data sent and recieved is shown. GraphViewController displays the data recieved during the application's use.
+\
+\
+The Model folder contains files that hold information about the BLE device peripheral. Most notably, it saves the CBUUIDs which tell the phone which device to connect to. As the scope of this project increases, there could be several CBUUIDs for each user.
+\
+\
+Finally, the View folder contains the outline for a table cell view. This is simply a way to display information that the controller uses to show the console. It's an easy way for the incoming and outgoing data to be displayed. Any other display options moving forward in the application design process can be outlined in this folder.
 
 #### How to Integrate a new Firebase Database
 
