@@ -56,3 +56,7 @@ In order to build the application with all of its features an Apple Developer ac
 The MVC architecture was central to the software design. MVC is commonly used for UI desgin and web applications and defines the flow of the application. The Model acts as the backbone of the code and manages the data of the application and is in charge of updating the View. The View displays the information the user needs to see, depending on imput from the Model. The Controller recieves user input and can send the relevant information to the Model. The fundamental idea is that the controller does not affect to the view directly.
 
 ##### Software Files
+
+#### How to Integrate a new Firebase Database
+
+In order to communicate with a new Firebase database, follow the steps outlined here: (IntegrateFirebase.pdf)
