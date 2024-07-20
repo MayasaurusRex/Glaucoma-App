@@ -88,3 +88,16 @@ Finally, the View folder contains the outline for a table cell view. This is sim
 
 In order to communicate with a new Firebase database, follow the steps outlined here: 
 https://github.com/MayasaurusRex/Glaucoma-App/blob/main/IntegrateFirebase.pdf
+
+#### How to Dynamically Update Firebase Fields
+
+To update Firebase fields to match the current device settings and reading values, follow the steps outlined here:
+
+## Helpful links
+
+This project is an update/continuation of this project: https://github.com/cchriskeach/Glaucoma-App 
+
+Other helpful sources throughout the project:
+1. https://www.swift.org/getting-started/swiftui/ 
+2. https://firebase.google.com/docs/ios/setup
+3. https://medium.com/theleanprogrammer/connecting-firebase-6102ef4eca08 
