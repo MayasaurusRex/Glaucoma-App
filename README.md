@@ -95,7 +95,7 @@ To update Firebase fields to match the current device settings and reading value
 
 ## Helpful links
 
-This project is an update/continuation of this project: https://github.com/cchriskeach/Glaucoma-App 
+This repository is an update/continuation of this project: https://github.com/cchriskeach/Glaucoma-App 
 
 Other helpful sources throughout the project:
 1. https://www.swift.org/getting-started/swiftui/ 
