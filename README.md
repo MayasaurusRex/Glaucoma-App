@@ -14,22 +14,16 @@ Since at the current moment the intraocular pressure reading device is still in 
 Most features are set up to assist with the development of the physical device associated with this applciation and are not optimized for end user use; although the foundations and functionality are built into this application and can be easily ported over for end user use in the future.
 
 The main features that were implemented in this application are as follows:
-1. Login and user verification process
-2. User and Server Account Creation
-3. Bluetooth Low Energy Central and Peripheral Connection
-4. Automatically identifying UUIDs, Services, and Characteristics for BLE transmission
-6. Bluetooth data collection
-7. Sending and Receiving data from the server
-8. Delete user
-9. Record observations on the server
-10. Delete observations
-11. Display observations in graphical form to the user
-12. Data is exchanged between the application and the user
-13. Data View to visualize IOP data
-14. Home View to start IOP test and record observations
-15. Settings with accesibility and health features to benefit user experience
-16. Debug mode for developers
-17. Setting time ranges for viewing observations
+
+1. Bluetooth Low Energy Central and Peripheral Connection
+2. Automatically identifying UUIDs, Services, and Characteristics for BLE transmission
+3. Bluetooth data collection
+4. Sending and Receiving data from the server
+5. Record observations on the server
+6. Display observations in graphical form to the user
+7. Data is exchanged between the application and the user
+8. Data View to visualize IOP data
+9. Home View to start IOP test and record observations
 
 ### Developer Quick Start
 
@@ -72,6 +66,23 @@ The Model folder contains files that hold information about the BLE device perip
 \
 \
 Finally, the View folder contains the outline for a table cell view. This is simply a way to display information that the controller uses to show the console. It's an easy way for the incoming and outgoing data to be displayed. Any other display options moving forward in the application design process can be outlined in this folder.
+
+### Future Development (And Known Issues)
+1. Login and user verification process
+2. User and Server Account Creation
+3. Delete user
+4. Delete observations
+5. Settings with accesibility and health features to benefit user experience
+6. Debug mode for developers
+7. Setting time ranges for viewing observations
+8. Implement SMART OAuth between the server and client
+9. Implement proper error handling
+10. A logger for logging events
+11. Add more user functionality for getting and using data.
+12. During very very slow internet connectivity the device may not respond, this is a rare occurance.
+13. If you delete all observation or the patient you need to restart the application
+14. Link incoming data to DataView2
+15. Add functionality to all options for settings
 
 #### How to Integrate a new Firebase Database
 
