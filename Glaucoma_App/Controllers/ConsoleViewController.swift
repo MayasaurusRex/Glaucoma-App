@@ -31,9 +31,11 @@ class ConsoleViewController: UIViewController {
   @IBOutlet weak var consoleTextField: UITextField!
   @IBOutlet weak var txLabel: UILabel!
   @IBOutlet weak var captureButton: UIButton!
-  @IBAction func scanningAction(_ sender: Any) {
-    getData();
-  }
+    @IBAction func scanningAction(_ sender: Any) {
+        Task { @MainActor in
+            await getData();
+        }
+    }
 
   override func viewDidLoad() {
       super.viewDidLoad()
@@ -163,7 +165,10 @@ class ConsoleViewController: UIViewController {
     peripheral?.writeValue(outgoingData as Data, for: BlePeripheral.connectedTXChar!, type: CBCharacteristicWriteType.withResponse)
   }
     
-  func getData() -> Void {
+    func getData() async -> Void {
+        
+        // example of reading data from Firebase
+        await getDoc()
 
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
       //Once connected, move to new view controller to manager incoming and outgoing data
@@ -174,7 +179,40 @@ class ConsoleViewController: UIViewController {
 
       self.navigationController?.pushViewController(detailViewController, animated: true)
     })
+    
   }
+    func getDoc() async -> Void {
+        
+        // https://firebase.google.com/docs/firestore/query-data/get-data
+        // From the source above, Swift does not support the ability to display all collections by name, it is required to look at a specific collection and document
+        // This is because Swift is a mobile/client so does not have full function support
+        
+        // find the document specified
+        let docRef = db.collection(today).document("Patient1")
+
+          do {
+              // try accessing the document
+              let document = try await docRef.getDocument()
+            
+              //if it exists, print values
+              if document.exists {
+              let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                  consoleTextView.text.append(document.data().map(String.init(describing:)) ?? "nil")
+              print("Document data: \(dataDescription)")
+          
+              // otherwise it doesn't exist
+              } else {
+                  print("Document does not exist")
+                  consoleTextView.text.append("Document does not exist")
+            }
+        
+          // check for errors
+          } catch {
+            print("Error getting document: \(error)")
+              consoleTextView.text.append("Error getting document: \(error)")
+          }
+    }
+    
 }
 
 extension ConsoleViewController: CBPeripheralManagerDelegate {
