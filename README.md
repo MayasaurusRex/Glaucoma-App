@@ -100,4 +100,5 @@ This repository is an update/continuation of this project: https://github.com/cc
 Other helpful sources throughout the project:
 1. https://www.swift.org/getting-started/swiftui/ 
 2. https://firebase.google.com/docs/ios/setup
-3. https://medium.com/theleanprogrammer/connecting-firebase-6102ef4eca08 
+3. https://medium.com/theleanprogrammer/connecting-firebase-6102ef4eca08
+4. https://firebase.google.com/docs/firestore/query-data/get-data
