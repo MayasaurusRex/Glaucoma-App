@@ -92,6 +92,7 @@ https://github.com/MayasaurusRex/Glaucoma-App/blob/main/IntegrateFirebase.pdf
 #### How to Dynamically Update Firebase Fields
 
 To update Firebase fields to match the current device settings and reading values, follow the steps outlined here:
+https://github.com/MayasaurusRex/Glaucoma-App/blob/main/DynamicallyUpdatingFirebaseFields.pdf
 
 ## Helpful links
 
